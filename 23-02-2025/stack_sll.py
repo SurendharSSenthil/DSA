@@ -61,7 +61,15 @@ class Stack:
 # space complexity: O(1) -> we are using constant amount of space.
     def is_empty(self):
         return self.head is None
-    
+# print the stack elements
+# time complexity: O(n) -> we are traversing the stack to print the elements using the temp pointer.
+# space complexity: O(1) 
+    def display(self):
+        temp = self.head
+        while temp:
+            print(temp.data, end=' ')
+            temp = temp.next
+        print()    
 def main():
     stack = Stack()
     stack.push(1)
